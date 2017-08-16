@@ -20,6 +20,13 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Enter name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter email");
+            string email = Console.ReadLine();
+            Console.WriteLine(name);
+            Console.WriteLine(email);
+            Console.ReadLine();
         }
     }
 }
