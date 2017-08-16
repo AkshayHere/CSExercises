@@ -16,12 +16,19 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            Console.WriteLine("Enter distance");
+            double distance = Convert.ToDouble(Console.ReadLine());
+            double fareCalculated = CalculateFare(distance);
+            Console.WriteLine("Fare is "+ fareCalculated);
+            Console.ReadLine();
         }
 
         public static double CalculateFare(double distance)
         {
             //YOUR CODE HERE
-            return 0;
+            double fare = 2.4 + (0.4 * distance);
+            double fareString = Convert.ToDouble(String.Format("{0:0.00}",fare));
+            return fareString;
 
         }
     }

@@ -21,14 +21,20 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            double number = Convert.ToDouble(Console.ReadLine());
+            string rootedNumber = SQRT(number);
+            Console.WriteLine(rootedNumber);
+            Console.ReadLine();
         }
 
         public static string SQRT(double x)
         {
             //YOUR CODE HERE: return the square root of x and then use String.Format 
             //to format it. The format is similar to WriteLine
-            return null;
 
+            double root = Math.Sqrt(x);
+            string returnValue = string.Format("{0:0.000}",root);
+            return returnValue;
         }
     }
 }

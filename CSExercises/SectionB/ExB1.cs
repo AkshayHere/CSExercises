@@ -14,12 +14,16 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
+            double number = Convert.ToDouble(Console.ReadLine());
+            double rootedNumber = SQRT(number);
+            Console.WriteLine(rootedNumber);
         }
 
         public static double SQRT(double x)
         {
             //YOUR CODE HERE: return the square root of x
-            return 0;
+            double root = Math.Sqrt(x);
+            return root;
 
         }
     }
