@@ -22,18 +22,32 @@ namespace CSExercises
         {
 
             //Your code here
-
-
-
+            Console.WriteLine("Enter distance");
+            double distance = Convert.ToDouble(Console.ReadLine());
+            double calculatedFare = CalculateFare(distance);
+            Console.WriteLine(calculatedFare);
+            Console.ReadLine();
         }
 
         public static double CalculateFare(double distance)
         {
             //YOUR CODE HERE
-            return 0;
+            double distanceMeters = distance * 100;
+            double fare=0;
+            if (distanceMeters <= 50)
+            {
+                fare = 2.40;
+            }
+            else if ((distanceMeters > 50)&&(distanceMeters <= 900))
+            {
+                fare = 2.40 + ((distanceMeters - 50) * 0.04 / 100);
+            }
+            else if (distanceMeters>900)
+            {
+                fare = 2.40 + (85 * 0.04) + ((distanceMeters - 900) * 0.05) / 100;
+            }
 
-
-
+            return fare;
         }
     }
 }

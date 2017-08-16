@@ -22,14 +22,39 @@ namespace CSExercises
             int mark = Convert.ToInt32(Console.ReadLine());
 
             string grade = CalculateGrade(mark);
-            Console.WriteLine("You scored {0} marks which is {1} grade.", grade);
-
+            Console.WriteLine("You scored {0} marks which is {1} grade.", mark, grade);
+            Console.ReadLine();
         }
 
         public static string CalculateGrade(int mark)
         {
             //YOUR CODE HERE
-            return null;
+            string graded = null;
+            if ((mark < 100) && (mark > 0))
+            {
+                if (mark >= 80)
+                {
+                    graded = "A";
+                }
+                else if(mark >= 60)
+                {
+                    graded = "B";
+                }
+                else if (mark >= 40)
+                {
+                    graded = "C";
+                }
+                else
+                {
+                    graded = "F";
+                }
+                return graded;
+            }
+            else
+            {
+                graded = "**Error**";
+            }
+            return graded;
         }
     }
 }
