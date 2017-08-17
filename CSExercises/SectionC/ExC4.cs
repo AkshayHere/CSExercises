@@ -44,7 +44,7 @@ namespace CSExercises
             }
             else if (distanceMeters>900)
             {
-                fare = 2.40 + (85 * 0.04) + ((distanceMeters - 900) * 0.05) / 100;
+                fare = 2.40 + (85 * 0.04) + (((distanceMeters - 900) * 0.05) / 100);
             }
 
             return fare;

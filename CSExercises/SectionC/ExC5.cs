@@ -18,15 +18,69 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             //YOUR CODE HERE
-
+            Console.WriteLine("Enter a three digit number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (IsArmstrongNumber(number) == true)
+            {
+                Console.WriteLine("Enter number is Armstrong number.");
+            }
+            else
+            {
+                Console.WriteLine("Enter number is not Armstrong number.");
+            }
+            Console.ReadLine();
         }
 
 
         public static bool IsArmstrongNumber(int n)
         {
             //YOUR CODE HERE
-            return false;
+            int[] nbrArray = new int[3];
+            int i1 = n % 10;
+            nbrArray[0] = i1;
+            int i2 = (n / 10) % 10;
+            nbrArray[1] = i2;
+            int i3 = (n / 100) % 10;
+            nbrArray[2] = i3;
 
+            double sum = 0;
+            bool isSum = false;
+
+            for (int i = 0; i < nbrArray.Length; i++)
+            {
+                sum = sum + Math.Pow(nbrArray[i], nbrArray.Length);
+            }
+
+            if (sum == n)
+            {
+                isSum = true;
+            }
+            else
+            {
+                isSum = false;
+            }
+
+            return isSum;
+
+            //int sum = 0;
+            //int enteredNumber = n;
+            //bool isTrue = false;
+            //while ( n!=0 )
+            //{
+            //    int reminder = n % 10;
+            //    sum = sum + (reminder * reminder * reminder);
+            //    n = n / 10;
+            //}
+
+            //if (sum == enteredNumber)
+            //{
+            //    isTrue = true;
+            //}
+            //else
+            //{
+            //    isTrue = false;
+            //}
+            //return isTrue;
         }
     }
 }
